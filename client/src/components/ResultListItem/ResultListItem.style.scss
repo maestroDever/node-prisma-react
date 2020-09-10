@@ -1,0 +1,18 @@
+.result-list-item {
+  margin-top: 0.5em;
+  .p-card {
+    &-body {
+      padding: 1em 0.5em;
+      padding-bottom: 0;
+    }
+  }
+  h4 {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  &__values {
+    .p-col {
+      padding: 0.3em;
+    }
+  }
+}

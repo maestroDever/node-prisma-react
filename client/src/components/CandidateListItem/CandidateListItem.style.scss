@@ -1,0 +1,32 @@
+.candidate_card {
+  margin-top: 0.5rem;
+
+  .p-panel {
+    .p-panel-titlebar {
+      display: none;
+    }
+    .p-panel-content {
+      border: none;
+      border-top: 1px solid gray;
+    }
+  }
+  .p-card {
+    &-body {
+      padding: 0.5em;
+      padding-bottom: 0;
+    }
+  }
+  .pi {
+    vertical-align: bottom;
+  }
+  &__content {
+    h4 {
+      text-align: left;
+      margin: 0;
+    }
+  }
+  &__avatar {
+    border-radius: 50%;
+    border: 5px solid;
+  }
+}

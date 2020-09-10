@@ -1,0 +1,30 @@
+@import "../../../theme/colors";
+
+.rate-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+
+  &:enabled:hover {
+    background-color: $hover-color;
+    .pi {
+      color: black;
+    }
+  }
+
+  &-label {
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: -1px;
+  }
+
+  .pi {
+    font-size: 2.5em;
+    padding-bottom: 0;
+    color: $gray;
+  }
+}

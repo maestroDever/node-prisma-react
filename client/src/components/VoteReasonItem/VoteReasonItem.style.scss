@@ -1,0 +1,68 @@
+@import "../../theme/colors";
+
+.vote-reason-item {
+  margin-bottom: 1em;
+  text-align: center;
+
+  .p-panel {
+    .p-panel-titlebar {
+      display: none;
+    }
+    .p-panel-content {
+      border: none;
+      border-top: 1px solid $gray;
+    }
+  }
+  .p-button {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    &:enabled:hover {
+      background-color: $hover-color;
+    }
+  }
+  .p-button-icon-left {
+    color: #a2a1a1;
+    font-size: 1.8em;
+  }
+  .dislike {
+    border: none;
+    color: white;
+    background-color: $dislike-color;
+    .p-button-icon-left {
+      color: white;
+    }
+    &:enabled:hover {
+      color: white;
+      background-color: $dislike-color;
+      .p-button-icon-left {
+        color: white;
+      }
+    }
+  }
+  .like {
+    border: none;
+    color: white;
+    background-color: $like-color;
+    .p-button-icon-left {
+      color: white;
+    }
+    &:enabled:hover {
+      color: white;
+      background-color: $like-color;
+      .p-button-icon-left {
+        color: white;
+      }
+    }
+  }
+
+  &__summary {
+    padding: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+  }
+  &__content {
+    text-align: center;
+  }
+}

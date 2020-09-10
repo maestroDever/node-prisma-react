@@ -1,0 +1,74 @@
+@import "../../theme/colors";
+
+.rating {
+  background-color: #f9f9f9;
+  &--button {
+    padding-bottom: 0;
+  }
+
+  &__top {
+    &:enabled:hover {
+      background-color: $brand-color-top;
+      color: white;
+      .rate-button-icon {
+        color: white;
+      }
+    }
+    background-color: $brand-color-top;
+    color: white;
+
+    .rate-button-icon {
+      color: white;
+    }
+  }
+  &__favorite {
+    &:enabled:hover {
+      background-color: $brand-color-favorite;
+      color: white;
+      .rate-button-icon {
+        color: white;
+      }
+    }
+    background-color: $brand-color-favorite;
+    color: white;
+
+    .rate-button-icon {
+      color: white;
+    }
+  }
+  &__compromise {
+    &:enabled:hover {
+      background-color: $brand-color-compromise;
+    }
+    background-color: $brand-color-compromise;
+
+    .rate-button-icon {
+      color: black;
+    }
+  }
+  &__veto {
+    &:enabled:hover {
+      background-color: $brand-color-veto;
+      color: white;
+      .rate-button-icon {
+        color: white;
+      }
+    }
+    background-color: $brand-color-veto;
+    color: white;
+
+    .rate-button-icon {
+      color: white;
+    }
+  }
+  &__unknowns {
+    &:enabled:hover {
+      background-color: $brand-color-tbd;
+    }
+    background-color: $brand-color-tbd;
+
+    .rate-button-icon {
+      color: black;
+    }
+  }
+}

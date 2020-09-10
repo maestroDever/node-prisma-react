@@ -1,0 +1,159 @@
+type User {
+  id: ID! @id
+  email: String! @unique
+  name: String!
+  password: String
+  gender: Gender @default(value: MALE)
+  role: Int @default(value: 0)
+}
+
+type Candidate {
+  id: ID! @id
+  name: String!
+  photo: String
+  party: String!
+  state: String!
+  current_office: String!
+  age: Int!
+  gender: Gender @default(value: MALE)
+  latest_poll: Float
+  latest_odds: Float
+  prevote_score: Float
+  bio_summary: String
+  vote_type: VoteType
+}
+
+type Qualification {
+  id: ID! @id
+  name: String!
+  summary: String
+  detail: String
+  years: Int!
+  rank: Int
+  candidateId: String
+  like_type: LikeType
+}
+
+type Topic {
+  id: ID! @id
+  name: String!
+  category: CategoryType! @default(value: HEALTH_CARE)
+}
+
+type Position {
+  id: ID! @id
+  name: String!
+  summary: String
+  topicId: String
+  detail: String
+  like_type: LikeType
+}
+
+type CandidatePosition {
+  id: ID! @id
+  positionId: String!
+  candidateId: String!
+  time: DateTime @updatedAt
+  link: String
+  rank: Int
+  latest: Boolean @default(value: false)
+}
+
+type UserVote {
+  id: ID! @id
+  candidateId: String!
+  userId: String!
+  vote_type: VoteType! @default(value: UNKNOWNS)
+  time: DateTime @updatedAt
+  latest: Boolean @default(value: false)
+}
+
+type UserQualificationLike {
+  id: ID! @id
+  userId: String!
+  qualificationId: String!
+  like: LikeType! @default(value: LIKE)
+  time: DateTime @updatedAt
+  latest: Boolean @default(value: false)
+}
+
+type UserPositionLike {
+  id: ID! @id
+  userId: String!
+  candidateId: String!
+  positionId: String!
+  like: LikeType @default(value: LIKE)
+  time: DateTime @updatedAt
+  latest: Boolean @default(value: false)
+}
+
+type Poll {
+  id: ID! @id
+  userId: String!
+  date: DateTime @updatedAt
+  candidateId: String!
+  poll_type: PollType! @default(value: PRIMARY)
+  error_margin: String
+  link_to_poll: String
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+enum CategoryType {
+  ABORTION
+  ACTIVISM
+  AWARDS
+  AWARDS_FOR_MILITARY_SERVICE
+  BANKING
+  BIOGRAPHICAL
+  BIPARTISAMSHIP
+  BUDGET
+  CAMPAIGN
+  CIVIL_RIGHTS
+  CONSTITUENT_SERVICES
+  CRIME
+  DEFENSE
+  DRUG_POLICY
+  ECONOMIC_INEQUALITY
+  ECONOMY
+  EDUCATION
+  ENVIRONMENT
+  EXECUTIVE_LEADERSHIP
+  FOREIGN_POLICY
+  GAFFES
+  GENDER
+  GUN_RIGHTS_CONTROL
+  HEALTH_CARE
+  IMMIGRATION
+  INFRASTRUCTURE
+  INTELLECTUAL_ABILITY
+  LEGISLATIVE
+  MILITARY_SERVICE
+  POLICING
+  POLITICAL_STRATEGY
+  SCANDAL
+  TBD
+  URBAN_DEVELOPMENT
+}
+
+enum VoteType {
+  TOP
+  FAVORITE
+  COMPROMISE
+  VETO
+  UNKNOWNS
+}
+
+enum LikeType {
+  LIKE
+  DISLIKE
+  UNSPECIFIED
+}
+
+enum PollType {
+  PRIMARY
+  HEADTOHEAD
+}

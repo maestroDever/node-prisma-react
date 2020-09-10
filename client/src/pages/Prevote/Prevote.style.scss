@@ -1,0 +1,43 @@
+@import "../../theme/colors";
+
+.prevote {
+  &__header {
+    position: sticky;
+    top: 60px;
+    background-color: white;
+    border-bottom: solid 2px gray;
+    margin-bottom: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    &--icon .pi {
+      font-size: 2em;
+    }
+    &--description {
+      font-size: 1.2em;
+      margin: 0;
+    }
+    .p-progressbar {
+      height: 8px;
+      .p-progressbar-value {
+        background-color: $purple;
+      }
+    }
+  }
+  &__footer {
+    margin-top: 1em;
+    .p-button {
+      border: none;
+      background-color: $purple;
+      font-weight: bold;
+    }
+  }
+  .p-dataview .p-dataview-content {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+  }
+  .p-panel .p-panel-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

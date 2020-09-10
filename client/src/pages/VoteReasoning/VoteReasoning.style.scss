@@ -1,0 +1,80 @@
+@import "../../theme/colors";
+
+.vote-reason {
+  background-color: white;
+  position: relative;
+
+  h4 {
+    font-size: 1.3em;
+    color: $blue;
+    margin: 0;
+  }
+
+  h3 {
+    color: $purple;
+    margin: 0;
+  }
+
+  &__header {
+    z-index: 100;
+    padding: 0.5em;
+    background-color: white;
+    position: sticky;
+    top: 60px;
+    .pi {
+      font-size: 2.5em;
+      color: gray;
+    }
+    &--description {
+      margin: 0;
+      font-weight: bold;
+      font-size: 1.4em;
+      color: gray;
+      text-align: center;
+    }
+  }
+
+  &__main {
+    z-index: 100;
+    position: sticky;
+    top: 123px;
+    background-color: #f2f2f2;
+    border-top: solid 1px $border-color;
+    border-bottom: solid 1px $border-color;
+    padding: 0.5em;
+    margin-bottom: 15px;
+    &__avatar {
+      margin-bottom: -40px;
+    }
+    @media screen and (max-width: 32em) {
+      top: 136px;
+    }
+  }
+
+  &__rating {
+    margin: 0 5px;
+    margin-bottom: 0.5em;
+    border-bottom: solid 1px $border-color;
+  }
+  &__qualification {
+    margin: 0 5px;
+    margin-bottom: 0.5em;
+    border-bottom: solid 1px $border-color;
+    background-color: white;
+  }
+  &__position {
+    margin: 0 5px;
+    background-color: white;
+  }
+  &__footer {
+    border-top: solid 2px gray;
+    .p-button {
+      border-color: $purple;
+      background-color: $purple;
+    }
+    .p-button-text {
+      font-size: 1em;
+      font-weight: bold;
+    }
+  }
+}
